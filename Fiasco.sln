@@ -1,6 +1,8 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual C# Express 2008
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fiasco", "Fiasco\Fiasco.csproj", "{B9DD2997-D0CE-4F57-BC8D-4BB50E622DBD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fiasco.Protocols.XBoard", "Fiasco.Protocols.XBoard\Fiasco.Protocols.XBoard.csproj", "{3C606173-CEBD-4DEB-88F9-FD625CCA837B}"
