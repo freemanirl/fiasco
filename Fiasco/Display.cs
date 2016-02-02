@@ -32,39 +32,39 @@ namespace Fiasco
             int index;
             ConsoleColor tempColour;
 
-            Console.BackgroundColor = ConsoleColor.Gray;
+            //Console.BackgroundColor = ConsoleColor.Gray;
             for (int i = 8; i >= 1; i--)
             {
-                tempColour = Console.BackgroundColor;
-                Console.BackgroundColor = ConsoleColor.Black;
-                Console.ForegroundColor = ConsoleColor.Gray;
+                //tempColour = Console.BackgroundColor;
+                //Console.BackgroundColor = ConsoleColor.Black;
+                //Console.ForegroundColor = ConsoleColor.Gray;
                 Console.Write(i + " ");
-                Console.BackgroundColor = tempColour;
+                //Console.BackgroundColor = tempColour;
 
                 for (int j = 1; j <= 8; j++)
                 {
                     index = Definitions.GetIndex(i, j);
                     if (board.ColourArray[index] == Definitions.WHITE)
-                        Console.ForegroundColor = ConsoleColor.White;
+                        //Console.ForegroundColor = ConsoleColor.White;
                     else if (board.ColourArray[index] == Definitions.BLACK)
-                        Console.ForegroundColor = ConsoleColor.Black;
+                        //Console.ForegroundColor = ConsoleColor.Black;
 
                     Console.Write(" " + Definitions.PieceValueToString[board.PieceArray[index]]);
 
-                    if (Console.BackgroundColor == ConsoleColor.Gray)
-                        Console.BackgroundColor = ConsoleColor.DarkGray;
-                    else
-                        Console.BackgroundColor = ConsoleColor.Gray;
+                    //if (Console.BackgroundColor == ConsoleColor.Gray)
+                        //Console.BackgroundColor = ConsoleColor.DarkGray;
+                    //else
+                        //Console.BackgroundColor = ConsoleColor.Gray;
                 }
 
-                if (Console.BackgroundColor == ConsoleColor.Gray)
-                    Console.BackgroundColor = ConsoleColor.DarkGray;
-                else
-                    Console.BackgroundColor = ConsoleColor.Gray;
+                //if (Console.BackgroundColor == ConsoleColor.Gray)
+                    //Console.BackgroundColor = ConsoleColor.DarkGray;
+                //else
+                    //Console.BackgroundColor = ConsoleColor.Gray;
                 Console.WriteLine();
             }
-            Console.ForegroundColor = ConsoleColor.Gray;
-            Console.BackgroundColor = ConsoleColor.Black;
+            //Console.ForegroundColor = ConsoleColor.Gray;
+            //Console.BackgroundColor = ConsoleColor.Black;
 
             Console.WriteLine("   A B C D E F G H\n");
             Console.WriteLine("Castling value:       " + board.Castling);

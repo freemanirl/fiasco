@@ -11,4 +11,5 @@ _ReSharper.*
 *.cache
 *.userprefs
 *.pidb
+*.meta
 ~$*
