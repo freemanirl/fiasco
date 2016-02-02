@@ -30,7 +30,7 @@ namespace Fiasco
         static public void Board(Board board)
         {
             int index;
-            ConsoleColor tempColour;
+            //ConsoleColor tempColour;
 
             //Console.BackgroundColor = ConsoleColor.Gray;
             for (int i = 8; i >= 1; i--)
@@ -44,9 +44,9 @@ namespace Fiasco
                 for (int j = 1; j <= 8; j++)
                 {
                     index = Definitions.GetIndex(i, j);
-                    if (board.ColourArray[index] == Definitions.WHITE)
+                    //if (board.ColourArray[index] == Definitions.WHITE)
                         //Console.ForegroundColor = ConsoleColor.White;
-                    else if (board.ColourArray[index] == Definitions.BLACK)
+                    //else if (board.ColourArray[index] == Definitions.BLACK)
                         //Console.ForegroundColor = ConsoleColor.Black;
 
                     Console.Write(" " + Definitions.PieceValueToString[board.PieceArray[index]]);
