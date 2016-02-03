@@ -810,6 +810,35 @@ namespace Fiasco
             return moves;
         }
 
+        public List<Move> GetPossibleMoves(int positionIndex)
+        {
+            List<Move> moves = new List<Move>(40);
+
+            switch (_pieceArray[positionIndex]) {
+                case Definitions.P:
+                    GeneratePawn(positionIndex, _turn, ref moves);
+                    break;
+                case Definitions.N:
+                    GenerateKnight(positionIndex, _turn, ref moves);
+                    break;
+                case Definitions.K:
+                    GenerateKing(positionIndex, _turn, ref moves);
+                    break;
+                case Definitions.B:
+                    GenerateBishop(positionIndex, _turn, ref moves);
+                    break;
+                case Definitions.R:
+                    GenerateRook(positionIndex, _turn, ref moves);
+                    break;
+                case Definitions.Q: // QUEEN == BISHOP + ROOK
+                    GenerateBishop(positionIndex, _turn, ref moves);
+                    GenerateRook(positionIndex, _turn, ref moves);
+                    break;
+            }
+
+            return moves;
+        }
+
         public List<Move> GenerateMoves()
         {
             return GenerateMoves(_turn);
