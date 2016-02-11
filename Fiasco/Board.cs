@@ -423,6 +423,15 @@ namespace Fiasco
         }
 
         /// <summary>
+        /// Check if a current turn side is in check
+        /// </summary>
+        /// <returns>true if current turn side is in check</returns>
+        public bool IsInCheck()
+        {
+            return IsInCheck(_turn);
+        }
+
+        /// <summary>
         /// Check if a side is in check
         /// </summary>
         /// <param name="turn">side</param>
@@ -1248,6 +1257,12 @@ namespace Fiasco
             }
 
             return true;
+        }
+
+        public void RemovePiece(int index)
+        {
+            _pieceArray[index] = Definitions.EMPTY;
+            _colourArray[index] = Definitions.EMPTY;
         }
         #endregion
 
